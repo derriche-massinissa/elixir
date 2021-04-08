@@ -4,6 +4,8 @@ Elixir is a kanban board that runs locally.
 
 It uses PostgreSQL as a database.
 
+![Screenshot of the Elixir Kanban Board](screenshot.png)
+
 ## Setup
 
 First, create a database named `elixir`:
