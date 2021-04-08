@@ -1,30 +1,3 @@
--- # Install
--- sudo pacman -S postgresql
---
--- # Postgres User (Added automatically at install)
--- sudo -iu postgres
---
--- # Initial Config
--- [postgres]$ initdb -D /var/lib/postgres/data
--- ...
--- [postgres]$ exit
---
--- # Start and Enable Service
--- sudo systemctl start postgresql.service
--- sudo systemctl enable postgresql.service
---
--- # Create Database User
--- sudo -iu postgres
--- [postgres]$ createuser --interactive
--- ...
--- -- Use same name as Linux username to access database without specifying user
--- ...
--- [postgres]$ exit
--- $ createdb elixir
---
--- # Setup Database for Elixir
--- $ psql -d elixir -a -f setup.pgsql
-
 SET client_encoding = 'UTF8';
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
