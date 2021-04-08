@@ -1,6 +1,6 @@
 {
-  "name": "kanbanboard",
-  "version": "1.0.0",
+  "name": "elixir",
+  "version": "0.4.3",
   "description": "A personal, local kanban board, using NodeJS and PostgreSQL on the server side",
   "main": "app.js",
   "scripts": {
@@ -13,10 +13,11 @@
     "postgresql",
     "web",
     "site",
-    "management"
+    "management",
+	"web-components"
   ],
-  "author": "Neon",
-  "license": "ISC",
+  "author": "HexOctal",
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^1.19.1"
   },

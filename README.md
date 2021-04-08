@@ -8,7 +8,12 @@ It uses PostgreSQL as a database.
 
 ## Setup
 
-First, create a database named `elixir`:
+First, install the necessary npm packages:
+```shell
+npm install
+```
+
+Then, create a database named `elixir`:
 ```pgsql
 createdb elixir
 ```
