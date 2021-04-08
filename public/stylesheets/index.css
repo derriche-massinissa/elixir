@@ -1,0 +1,276 @@
+/* Fonts */
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../fonts/NotoSans/NotoSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Noto Sans Bold";
+    src: url("../fonts/NotoSans/NotoSans-Bold.ttf");
+}
+
+html, body, button {
+    color: var(--c-main);
+    font-family: "Noto Sans", Roboto, "Ubuntu Droid Sans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+/* Page */
+:root {
+    /* c: color (#xXyYzZ ; rgb[a]() ; hsl[a]() ...) */
+    /* rgb: r, g, b */
+    /* Text */
+    --c-main-very-weak-alt: #6b778c;
+    --c-main-very-weak: #5e6c84;
+    --c-main-weak: #42526e;
+    --c-main: #172b4d;
+    --c-main-strong: #091e42;
+
+    /* Buttons */
+    --c-btn-positive: #5aac44;
+    --c-btn-positive-hover: #61bd4f;
+    --c-btn-positive-text: #fff;
+    --c-btn-negative: #cf513d;
+    --c-btn-negative-hover: #eb5a46;
+    --c-btn-negative-text: #fff;
+    --c-btn-disabled: #f4f5f7;
+    --c-btn-disabled-text: #a5adba;
+    --c-btn-on: #f2d600;
+
+    /* Dialog Buttons */
+    --dialog-close-button-light-bg: var(--c-white-24);
+    --dialog-close-button-light-bg-hover: var(--c-white-32);
+    --dialog-close-button-light-fg: var(--c-white);
+    --dialog-close-button-dark-bg: var(--c-black-8);
+    --dialog-close-button-dark-bg-hover: var(--c-black-15);
+    --dialog-close-button-dark-fg: var(--c-main-weak);
+
+    /* Inputs */
+    --c-focus: #0079bf;
+    --c-focus-bg: #e4f0f6;
+    --focus-border: inset 0 0 0 2px var(--c-focus);
+    --blur-border: inset 0 0 0 2px #dfe1e6;
+    --c-heavy-edit-bg: #fafbfc;
+
+    /* Panels/Windows */
+    --c-panel-1: white;
+    --c-panel-2: #ebecf0;
+    --c-panel-3: #f4f5f7;
+    --c-list: #ebecf0; /*rgba(235, 236, 240, .5); /* #ebecf0; */
+
+    /* Blacks */
+    --rgb-black: 0, 0, 0;
+    --c-black: rgb( var(--rgb-black) );
+    --c-black-8: rgba( var(--rgb-black), .08 );
+    --c-black-12: rgba( var(--rgb-black), .12 );
+    --c-black-15: rgba( var(--rgb-black), .15 );
+    --c-black-24: rgba( var(--rgb-black), .24 );
+    --c-black-40: rgba( var(--rgb-black), .4 );
+    --c-black-60: rgba( var(--rgb-black), .6 );
+    --c-black-64: rgba( var(--rgb-black), .64 );
+    --c-black-70: rgba( var(--rgb-black), .7 );
+    --c-black-75: rgba( var(--rgb-black), .75 );
+    /* Grays */
+    --rgb-gray: 9, 30, 66;
+    --c-gray-4: rgba( var(--rgb-gray), .04 );
+    --c-gray-8: rgba( var(--rgb-gray), .08 );
+    --c-gray-13: rgba( var(--rgb-gray), .13 );
+    /* Whites */
+    --rgb-white: 0, 0%, 100%;
+    --c-white: hsl( var(--rgb-white) );
+    --c-white-15: hsla( var(--rgb-white), .15 );
+    --c-white-20: hsla( var(--rgb-white), .2 );
+    --c-white-24: hsla( var(--rgb-white), .24 );
+    --c-white-30: hsla( var(--rgb-white), .3 );
+    --c-white-32: hsla( var(--rgb-white), .32 );
+    --c-white-60: hsla( var(--rgb-white), .6 );
+
+    /* Scrollbar */
+    --c-scrollbar-primary: rgba(0, 0, 0, .4);
+    --c-scrollbar-secondary: rgba(0, 0, 0, .2);
+
+    /* Progress Bars */
+    --c-progress-bar: #5ba4cf;
+    --c-progress-bar-complete: #61bd4f;
+
+    /* Badges */
+    --c-badge-complete: #61bd4f;
+
+    /* Gaps */
+    --list-gap: 4px;
+    --header-gap: 4px;
+    --header-width: 32px;
+
+    /* Shadow */
+    /*--shadow: 0 8px 16px -4px rgba(9, 30, 66, .25), 0, 0, 0, 1px rgba(9, 30, 66, .08);*/
+    --shadow: 0 12px 24px -6px rgba(9,30,66,.25),0 0 0 1px rgba(9,30,66,.08);
+    --shadow-card: 0 1px 0 rgba(9, 30, 66, .25);
+    --shadow-archived-card: 0 1px 1px rgba(9,30,66,.25),0 0 0 1px rgba(9,30,66,.08);
+
+    /* Borders */
+    --border-radius: 3px;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+div#base {
+    height: 100%;
+    background-position: 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+div#site-container {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Defaults */
+* {
+    outline: none;
+}
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border: 0;
+}
+a {
+    color: var(--c-main);
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: var(--c-main-strong);
+}
+
+
+/* Button */
+button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    transition: background-color 85ms ease;
+}
+button:disabled {
+    background-color: var(--c-btn-disabled) !important;
+    color: var(--c-btn-disabled-text) !important;
+    cursor: not-allowed !important;
+}
+button.positive {
+    background-color: var(--c-btn-positive);
+    color: var(--c-btn-positive-text);
+}
+button.positive:hover {
+    background-color: var(--c-btn-positive-hover);
+    color: var(--c-btn-positive-text);
+}
+button.neutral {
+    color: var(--c-main-weak);
+}
+button.neutral:hover {
+    color: var(--c-main);
+}
+button.negative {
+    background-color: var(--c-btn-negative);
+    color: var(--c-btn-negative-text);
+}
+button.negative:hover {
+    background-color: var(--c-btn-negative-hover);
+    color: var(--c-btn-negative-text);
+}
+
+
+textarea {
+    font-family: "Noto Sans", sans-serif;
+}
+input {
+    font-family: "Noto Sans", sans-serif;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--border-radius);
+}
+
+/* Special Classes */
+.hide {
+    display: none !important;
+}
+.invisible {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 1px;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.fancy-scrollbar {
+    /* Firefox */
+    scrollbar-color: var(--c-scrollbar-primary) var(--c-scrollbar-secondary);
+    scrollbar-width: auto;
+}
+.icon-sm,
+.icon-a {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+.icon-lg {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    line-height: 36px;
+    font-size: 24px;
+    text-align: center;
+}
+.button-link {
+    background-color: var(--c-gray-4);
+    box-shadow: none;
+    border: none;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    overflow: hidden;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    transition: background-color 85ms ease;
+}
+.button-link:hover {
+    background-color: var(--c-gray-8);
+}
+.button-link:active {
+    background-color: var(--c-focus-bg);
+    color: var(--c-focus);
+}

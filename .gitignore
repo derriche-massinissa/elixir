@@ -1,0 +1,9 @@
+node_modules/
+server_resources/
+
+Session.vim
+**/Session.vim
+Kanban_Board.drawio
+**/tags
+
+public/files/

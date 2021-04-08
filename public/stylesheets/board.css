@@ -1,0 +1,17 @@
+/* Board */
+main#content {
+    flex-grow: 1;
+    position: relative;
+    overflow-y: auto;
+    outline: none;
+}
+div#board-wrapper {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}

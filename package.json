@@ -1,0 +1,29 @@
+{
+  "name": "kanbanboard",
+  "version": "1.0.0",
+  "description": "A personal, local kanban board, using NodeJS and PostgreSQL on the server side",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kanban",
+    "board",
+    "nodejs",
+    "postgresql",
+    "web",
+    "site",
+    "management"
+  ],
+  "author": "Neon",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "gm": "^1.23.1",
+    "pg": "^8.5.1"
+  }
+}
